@@ -1,2 +1,17 @@
-To initialise dvc in your project 
+//To initialise dvc in your project 
 dvc init 
+
+// This is Important Note
+dvc is used to tract only data ,
+and make sure that data is not tracked by git 
+
+
+// This is used to checkout to any other git id 
+// first move 
+git checkout git_id
+// then dvc checkout to same git_id
+dvc checkout 
+
+
+dvc -> for data tracking (data version control)
+git -> for track code and dvc configuration
