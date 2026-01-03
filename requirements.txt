@@ -1,0 +1,10 @@
+numpy
+pandas
+python-dotenv
+mysql-connector-python
+pymysql
+scikit-learn
+
+
+# It automatically trigger and execute setup.py witout executing manually pyton setup.py install 
+# -e .

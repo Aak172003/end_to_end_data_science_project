@@ -1,0 +1,3 @@
+This is how execute setup file to make a small pacajeg of whole application
+
+python setup.py install 
