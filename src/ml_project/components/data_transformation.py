@@ -115,6 +115,7 @@ class DataTransformation:
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessing_obj,
             )
+            logging.info("Successfully saved preprocessing object.")
 
             return (
                 train_arr,
