@@ -32,7 +32,12 @@ class DataIngestion:
             # pass
 
             # Reading code
-            df = read_sql_configuration()
+            # df = read_sql_configuration()
+
+            # ---------------------------------------------------------------------------------------------------------
+
+            # Read data from csv file instead of reading every time from sql database
+            df = pd.read_csv(os.path.join("notebook/data", "raw.csv"))
             logging.info("Reading completed from sql database")
 
             os.makedirs(

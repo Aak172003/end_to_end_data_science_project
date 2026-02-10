@@ -3,6 +3,7 @@
 Training metrics mostly tell you how well the model memorized the data, not how well it generalizes.
 
 2️⃣ Compare Test-set performance (side-by-side thinking)
+
 🔹 Best R² (higher = better)
 
 | Model             | Test R²      |
@@ -19,9 +20,6 @@ Training metrics mostly tell you how well the model memorized the data, not how 
 
 ➡ Ridge ≈ Linear Regression are best
 
-
-
-
 🔹 Lowest RMSE (lower = better)
 
 | Model             | Test RMSE    |
@@ -36,9 +34,7 @@ Training metrics mostly tell you how well the model memorized the data, not how 
 | KNN               | 7.2553       |
 | Decision Tree     | 8.2846       |
 
-
 ➡ Ridge & Linear Regression win again
-
 
 🔹 Lowest MAE (lower = better)
 
@@ -68,7 +64,7 @@ Look at train vs test gap:
 
 Decision Tree
 
-Train R² = 0.9997 😱
+Train R² = 0.9997 😱 // It means overfitting
 
 Test R² = 0.7179
 👉 Memorized data, failed to generalize
@@ -92,31 +88,27 @@ Small error gap
 
 5️⃣ How to explain this in interviews / reports 🎯
 
-“Although advanced models like XGBoost and Random Forest performed very well on training data, they showed signs of overfitting. Ridge Regression achieved the best balance between bias and variance, giving the lowest test error and highest R², making it the most reliable model.”
+“Although advanced models like XGBoost and Random Forest performed very well on training data, they showed signs of overfitting. 
+Ridge Regression achieved the best balance between bias and variance, giving the lowest test error and highest R², making it the most reliable model.”
 
 
 1️⃣ The simplest signal of overfitting (golden rule)
-
 👉 Compare TRAIN vs TEST performance
 
-
-1️⃣ The simplest signal of overfitting (golden rule)
-
-👉 Compare TRAIN vs TEST performance
-
+---------------------------------------------------------------------------------------------------------------------------------------
 If:
 
 Train score is very high
-
 Test score drops a lot
 
 ➡ Overfitting
-
+---------------------------------------------------------------------------------------------------------------------------------------
 If:
 
 Train ≈ Test
 ➡ Good generalization
 
+---------------------------------------------------------------------------------------------------------------------------------------
 If:
 
 Both are bad
@@ -127,7 +119,6 @@ Both are bad
 ❌ Decision Tree (classic overfitting example)
 Train R² = 0.9997
 Test  R² = 0.7179
-
 
 Red flags 🚩
 
@@ -142,7 +133,6 @@ Train RMSE = 0.27 vs Test RMSE = 8.28
 ❌ XGBoost
 Train R² = 0.9955
 Test  R² = 0.8278
-
 
 Huge gap
 
@@ -159,7 +149,6 @@ Test  R² = 0.8530
 
 
 Moderate gap
-
 Some overfitting
 
 Acceptable but not optimal
@@ -168,15 +157,6 @@ Acceptable but not optimal
 Ridge:
 Train R² = 0.8743
 Test  R² = 0.8806
-
-
-Almost identical
-
-Even test slightly better (normal due to randomness)
-
-👉 Excellent generalization
-
-3️⃣ Quantify overfitting (simple metric)
 
 You can compute a generalization gap:
 
@@ -193,27 +173,5 @@ Linear	-0.0061 ✅
 📌 Rule of thumb
 
 Gap > 0.10 → overfitting risk
-
 Gap ≈ 0 → good
-
 Gap < 0 → very stable
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
